@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>Mobile App Development - LUNA-INC</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Styling Khusus Form & Komponen Halaman Mobile App */
+        .btn-back {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: #ffd700;
+            padding: 10px 20px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+        }
+        .btn-back:hover {
+            background: rgba(255, 215, 0, 0.1);
+            border-color: #ffd700;
+        }
+        .project-samples {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+        .sample-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+            padding: 20px;
+            text-align: left;
+        }
+        .sample-card h4 { color: #00f0ff; margin-bottom: 5px; font-size: 1rem; }
+        .sample-card p { color: #a0a7b8; font-size: 0.8rem; }
+        
+        /* Form Glassmorphism Styling */
+        .form-container {
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 20px;
+            padding: 25px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+        }
+        .form-group {
+            margin-bottom: 18px;
+            text-align: left;
+        }
+        .form-group label {
+            display: block;
+            color: #ffd700;
+            font-size: 0.85rem;
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%;
+            background: rgba(4, 6, 15, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 12px;
+            color: #fff;
+            font-size: 0.9rem;
+            outline: none;
+            transition: all 0.3s;
+        }
+        /* Fix warna option select di android */
+        .form-group select option {
+            background: #04060f;
+            color: #fff;
+        }
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+            border-color: #00f0ff;
+            box-shadow: 0 0 10px rgba(0, 240, 255, 0.2);
+        }
+        .form-group input[type="file"] {
+            padding: 8px;
+            cursor: pointer;
+            background: rgba(0, 240, 255, 0.02);
+            border: 1px dashed rgba(0, 240, 255, 0.3);
+        }
+        .form-group input[type="file"]::file-selector-button {
+            background: #00f0ff;
+            border: none;
+            padding: 6px 12px;
+            border-radius: 6px;
+            color: #04060f;
+            font-weight: 600;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+        .submit-btn {
+            background: #00f0ff;
+            color: #04060f;
+            border: none;
+            width: 100%;
+            padding: 14px;
+            border-radius: 12px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 1rem;
+            cursor: pointer;
+            box-shadow: 0 0 15px rgba(0, 240, 255, 0.4);
+            transition: all 0.3s ease;
+        }
+        .submit-btn:hover {
+            box-shadow: 0 0 25px rgba(0, 240, 255, 0.7);
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <a href="index.html" class="btn-back">
+            <i class="fa-solid fa-arrow-left"></i> Kembali ke Beranda
+        </a>
+
+        <section class="hero-card" style="padding: 30px 20px; margin-bottom: 20px;">
+            <div class="hero-logo" style="font-size: 2.5rem; color: #00f0ff;">
+                <i class="fa-solid fa-mobile-screen-button"></i>
+            </div>
+            <h1>Mobile App Development</h1>
+            <p>Portofolio Contoh & Pengajuan Project Android / iOS</p>
+        </section>
+
+        <h2 class="section-title" style="font-size: 1.1rem; text-align: left; margin-bottom: 10px;">Our Mobile Projects</h2>
+        <div class="project-samples">
+            <div class="sample-card">
+                <h4>Smart Delivery App</h4>
+                <p>Aplikasi pelacak kurir real-time berbasis Maps untuk Android & iOS.</p>
+            </div>
+            <div class="sample-card">
+                <h4>E-Wallet & Fintech</h4>
+                <p>Aplikasi keuangan super aman dengan scan QR-Code dan mutasi instan.</p>
+            </div>
+        </div>
+
+        <div class="form-container">
+            <h3 style="color:#ffd700; font-family:'Montserrat'; margin-bottom: 20px; font-size: 1.1rem; text-align:center;">FORM PENGAJUAN APLIKASI</h3>
+            <form id="mobileProjectForm">
+                <div class="form-group">
+                    <label for="clientName">Nama Lengkap / Perusahaan</label>
+                    <input type="text" id="clientName" placeholder="Contoh: PT. Maju Sentosa" required>
+                </div>
+                <div class="form-group">
+                    <label for="appPlatform">Target Platform OS</label>
+                    <select id="appPlatform" required>
+                        <option value="" disabled selected>Pilih Platform...</option>
+                        <option value="Android App Only">Android App (APK/AAB)</option>
+                        <option value="iOS App Only">iOS App (App Store)</option>
+                        <option value="Cross-Platform (Android & iOS)">Dual Platform (Android & iOS)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="projectDesc">Fitur Utama & Deskripsi Aplikasi</label>
+                    <textarea id="projectDesc" rows="4" placeholder="Jelaskan alur kerja atau fitur aplikasi yang ingin dibuat..." required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="projectFile">Unggah Dokumen / Gambar UI (PDF, PNG, JPG)</label>
+                    <input type="file" id="projectFile" accept=".pdf, image/*">
+                </div>
+                <button type="submit" class="submit-btn">KIRIM SPESIFIKASI VIA WA</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('mobileProjectForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            // Mengambil seluruh isi input data
+            const name = document.getElementById('clientName').value;
+            const platform = document.getElementById('appPlatform').value;
+            const desc = document.getElementById('projectDesc').value;
+            const fileInput = document.getElementById('projectFile');
+            
+            // Logika membaca nama berkas lampiran
+            let fileName = "Tidak ada lampiran";
+            if (fileInput.files.length > 0) {
+                fileName = fileInput.files[0].name;
+            }
+
+            // Ganti dengan nomor WhatsApp resmi LUNA-INC
+            const waNumber = "6289677222133"; 
+            
+            // Merangkai teks pesan otomatis (Support Markdown Bold & Italic WA)
+            let message = `*PENGAJUAN PROYEK MOBILE APP DEVELOPMENT*\n\n`;
+            message += `• *Nama Pengaju:* ${name}\n`;
+            message += `• *Platform OS:* ${platform}\n`;
+            message += `• *Fitur & Deskripsi:* ${desc}\n`;
+            message += `• *Lampiran Dokumen:* _${fileName}_\n\n`;
+            
+            if(fileInput.files.length > 0) {
+                message += `_(Halo LUNA-INC, saya sudah memilih file *${fileName}* di formulir, saya akan lampirkan filenya secara manual setelah ini)._`;
+            }
+
+            // Mengubah string pesan menjadi format URL-Safe
+            const encodedMessage = encodeURIComponent(message);
+            
+            // redirect ke API Whatsapp aplikasi / web
+            window.location.href = `https://wa.me/${waNumber}?text=${encodedMessage}`;
+        });
+    </script>
+</body>
+</html>
