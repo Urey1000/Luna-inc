@@ -3,230 +3,202 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-    <title>LUNA-INC - Professional Website & Mobile App Development</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap">
+    <title>Website Development - LUNA-INC</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <style>
-        #hero-title {
-            font-size: 0.9em; 
+        /* Modifikasi Layout Tambahan khusus Form Halaman Ini */
+        .btn-back {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: #ffd700;
+            padding: 10px 20px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
         }
-        .typing-cursor {
-            font-weight: normal;
-            color: #00f0ff; 
-            animation: blink 0.7s infinite;
+        .btn-back:hover {
+            background: rgba(255, 215, 0, 0.1);
+            border-color: #ffd700;
         }
-        @keyframes blink {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0; }
+        .project-samples {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 15px;
+            margin-bottom: 30px;
         }
-        /* Tambahan agar scroll ke section terlihat lebih halus */
-        html {
-            scroll-behavior: smooth;
+        .sample-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+            padding: 20px;
+            text-align: left;
+        }
+        .sample-card h4 { color: #00f0ff; margin-bottom: 5px; font-size: 1rem; }
+        .sample-card p { color: #a0a7b8; font-size: 0.8rem; }
+        
+        /* Form Styling */
+        .form-container {
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 20px;
+            padding: 25px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+        }
+        .form-group {
+            margin-bottom: 18px;
+            text-align: left;
+        }
+        .form-group label {
+            display: block;
+            color: #ffd700;
+            font-size: 0.85rem;
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+        .form-group input, .form-group textarea, .form-group input[type="file"] {
+            width: 100%;
+            background: rgba(4, 6, 15, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 12px;
+            color: #fff;
+            font-size: 0.9rem;
+            outline: none;
+            transition: all 0.3s;
+        }
+        .form-group input:focus, .form-group textarea:focus {
+            border-color: #00f0ff;
+            box-shadow: 0 0 10px rgba(0, 240, 255, 0.2);
+        }
+        .form-group input[type="file"] {
+            padding: 8px;
+            cursor: pointer;
+            background: rgba(0, 240, 255, 0.02);
+            border: 1px dashed rgba(0, 240, 255, 0.3);
+        }
+        .form-group input[type="file"]::file-selector-button {
+            background: #00f0ff;
+            border: none;
+            padding: 6px 12px;
+            border-radius: 6px;
+            color: #04060f;
+            font-weight: 600;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+        .submit-btn {
+            background: #00f0ff;
+            color: #04060f;
+            border: none;
+            width: 100%;
+            padding: 14px;
+            border-radius: 12px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 1rem;
+            cursor: pointer;
+            box-shadow: 0 0 15px rgba(0, 240, 255, 0.4);
+            transition: all 0.3s ease;
+        }
+        .submit-btn:hover {
+            box-shadow: 0 0 25px rgba(0, 240, 255, 0.7);
+            transform: translateY(-2px);
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <header>
-            <div class="logo-area" id="brand-logo"></div>
-            <nav>
-                <ul>
-                    <li><a href="#" class="active">Home</a></li>
-                    <li><a href="#services-container" class="cyan-nav">Services</a></li>
-                    <li><a href="portofolio.html" class="cyan-nav">Portofolio</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </header>
+        <a href="index.html" class="btn-back">
+            <i class="fa-solid fa-arrow-left"></i> Kembali ke Beranda
+        </a>
 
-        <section class="hero-card">
-            <div class="hero-logo">
-                <i class="fa-solid fa-crown"></i>
+        <section class="hero-card" style="padding: 30px 20px; margin-bottom: 20px;">
+            <div class="hero-logo" style="font-size: 2.5rem; color: #00f0ff;">
+                <i class="fa-solid fa-code"></i>
             </div>
-            <h1 id="hero-title"></h1>
-            <p id="hero-subtitle"></p>
+            <h1>Website Development</h1>
+            <p>Portofolio Contoh & Pengajuan Project</p>
         </section>
 
-        <section class="services-grid" id="services-container"></section>
-
-        <section class="testimonials-section">
-            <h2 class="section-title">Testimonials</h2>
-            <div class="testimonials-wrapper">
-                <div class="testimonials-track" id="testimonials-container"></div>
+        <h2 class="section-title" style="font-size: 1.1rem; text-align: left; margin-bottom: 10px;">Our Project Examples</h2>
+        <div class="project-samples">
+            <div class="sample-card">
+                <h4>E-Commerce Platform</h4>
+                <p>Sistem toko online terintegrasi payment gateway otomatis.</p>
             </div>
-        </section>
-
-        <div class="cta-area" id="contact">
-            <a href="#" id="wa-btn" class="btn-whatsapp" target="_blank">HUBUNGI KAMI</a>
+            <div class="sample-card">
+                <h4>Company Profile</h4>
+                <p>Website perusahaan premium dengan animasi interaktif & SEO tinggi.</p>
+            </div>
         </div>
 
-        <footer class="footer-link">
-            <a href="#" id="footer-url-text"></a>
-            <p id="footer-address-text" style="font-size: 0.8rem; margin-top: 10px; color: #a0aec0; text-align: center; line-height: 1.5;"></p>
-        </footer>
+        <div class="form-container">
+            <h3 style="color:#ffd700; font-family:'Montserrat'; margin-bottom: 20px; font-size: 1.1rem; text-align:center;">FORM PENGAJUAN PROYEK</h3>
+            <form id="projectForm">
+                <div class="form-group">
+                    <label for="clientName">Nama Lengkap / Instansi</label>
+                    <input type="text" id="clientName" placeholder="Contoh: Budi Santoso" required>
+                </div>
+                <div class="form-group">
+                    <label for="projectType">Jenis Website</label>
+                    <input type="text" id="projectType" placeholder="Contoh: E-Commerce, Landing Page, SaaS" required>
+                </div>
+                <div class="form-group">
+                    <label for="projectDesc">Deskripsi Singkat Kebutuhan</label>
+                    <textarea id="projectDesc" rows="4" placeholder="Jelaskan fitur-fitur website yang Anda inginkan..." required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="projectFile">Unggah Dokumen Pendukung (PDF / Gambar Brief)</label>
+                    <input type="file" id="projectFile" accept=".pdf, image/*">
+                </div>
+                <button type="submit" class="submit-btn">KIRIM VIA WHATSAPP</button>
+            </form>
+        </div>
     </div>
 
     <script>
-        const webData = {
-            companyName: "LUNA-INC",
-            logoPath: "L1.jpeg", // Lokasi file logo JPEG kamu
-            websiteUrl: "https://luna-inc.my.id",
-            whatsappNumber: "6289677222133",
-            whatsappTemplateMessage: "Halo, saya tertarik dengan layanan LUNA-INC!",
-            address: "Address : Jl. Kusuma Nusantara No.17, Palasari, Kec. Cibiru, Kota Bandung, Jawa Barat 40615, Indonesia", 
-            hero: {
-                title: "Professional Web & App Development", 
-                subtitle: "Solusi digital terbaik untuk bisnis Anda."
-            },
-            services: [
-                { title: "Website Development", desc: "Bikin website super cepat.", iconClass: "fa-solid fa-desktop" },
-                { title: "Mobile App", desc: "Aplikasi Android & iOS.", iconClass: "fa-solid fa-mobile-screen" },
-                { title: "UI/UX Design", desc: "Tampilan modern & elegan.", iconClass: "fa-solid fa-pen-nib" }
-            ],
-            testimonials: [
-                { "text": "Aplikasi pesanan galonnya mantap! Pelanggan ruko tinggal klik, armada langsung kirim.", "author": "- Depot Air isi Ulang Tirta Rungkut, Surabaya" },
-                { "text": "Katalog web dari LUNA-INC bikin omset outlet distro kita di TP naik dua kali lipat!", "author": "- Owner, Urban Fashion (Tunjungan Plaza, Surabaya)" },
-                { "text": "Sistem monitoring antrean pengisian air depo kami jadi super rapi lewat dashboard web.", "author": "- Depot Air Segar Lestari, Semarang" },
-                { "text": "Web landing page-nya elegan, pas banget buat branding butik fashion premium mall kami.", "author": "- Store Manager, Casual Style (Paragon Mall, Semarang)" },
-                { "text": "Gak pusing lagi catat pelanggan bulanan, sistem manajemen air isi ulangnya top markotop.", "author": "- Depot AquaFresh Dago, Bandung" },
-                { "text": "UI web-nya beneran kelas dunia, sangat memuaskan buat katalog outlet clothing brand kami.", "author": "- Founder, Denim Co (Paris Van Java, Bandung)" },
-                { "text": "Sangat membantu distribusi air isi ulang ke resort dan hotel-hotel lokal di Lombok.", "author": "- Pengelola, Lombok Tirta Mandiri, Mataram" },
-                { "text": "Promosi kain tenun khas lombok di outlet mall jadi keliatan modern dan banjir orderan luar negeri.", "author": "- Owner, Sasak Heritage (Lombok Epicentrum Mall)" },
-                { "text": "Integrasi orderan villa via web responsif banget, bule-bule gampang kalau mau order air bersih.", "author": "- Depot Hydro Bali, Denpasar" },
-                { "text": "Payment gateway di website butik pantai kami aman terpercaya, turis asing bisa bayar instan.", "author": "- Island Vibes Boutique (Beachwalk, Bali)" },
-                { "text": "Aplikasi kasir dan manajemen stok galon kosongnya bekerja 100% tanpa kendala bug.", "author": "- Depot Barokah Water, Surabaya" },
-                { "text": "Terima kasih LUNA-INC, tampilan web outlet fashion kami dipuji manajemen mall pusat.", "author": "- Owner, Glamour Boutique (Galaxy Mall, Surabaya)" },
-                { "text": "Website andalan buat langganan air minum isi ulang kompleks perumahan elite semarang.", "author": "- Depot Mineral Utama, Semarang" },
-                { "text": "Sistem web ordernya gampang dipahami sales outlet kami, gak pake ribet konfirmasi manual.", "author": "- Management, Streetwear ID (Ciputra Mall, Semarang)" },
-                { "text": "Dashboard pelacakan galon kirimnya akurat, meminimalisir kehilangan aset depo air.", "author": "- Depot Tirta Hejo, Bandung" },
-                { "text": "Konsep minimalis glassmorphism webnya cocok banget sama tema pakaian ramah lingkungan kami.", "author": "- CEO, Earth Wear (23 Paskal, Bandung)" },
-                { "text": "Layanan mantap, pembuatan web cepat dan langsung bisa dipakai operasional depo air minum.", "author": "- Depot Dewata Fresh, Kuta Bali" },
-                { "text": "Sangat membantu meningkatkan penjualan offline outlet mall lewat konversi traffic online.", "author": "- Batik Modern Concept (Mataram Mall, Lombok)" }
-            ]
-        };
+        document.getElementById('projectForm').addEventListener('submit', function(e) {
+            e.preventDefault();
 
-        document.addEventListener("DOMContentLoaded", function () {
+            // Ambil data inputan user
+            const name = document.getElementById('clientName').value;
+            const type = document.getElementById('projectType').value;
+            const desc = document.getElementById('projectDesc').value;
+            const fileInput = document.getElementById('projectFile');
             
-            // 1. Render Logo dengan PNG dan Teks Diperlebar
-            const brandLogo = document.getElementById('brand-logo');
-            if (brandLogo) {
-                // Menata elemen gambar dan teks agar sejajar menggunakan flexbox bawaan inline
-                brandLogo.style.display = "flex";
-                brandLogo.style.alignItems = "center";
-                
-                // Memasukkan gambar logo dan mengatur jarak huruf (letter-spacing: 3px)
-                brandLogo.innerHTML = `
-                    <img src="${webData.logoPath}" alt="Logo" style="height: 35px; margin-right: 10px; object-fit: contain;">
-                    <span style="letter-spacing: 3px; font-weight: 700;">${webData.companyName}</span>
-                `;
+            // Cek jika ada file yang dipilih
+            let fileName = "Tidak ada lampiran";
+            if (fileInput.files.length > 0) {
+                fileName = fileInput.files[0].name;
             }
 
-            // 2. Render Hero 
-            const heroTitle = document.getElementById('hero-title');
-            const heroSubtitle = document.getElementById('hero-subtitle');
-
-            if (heroSubtitle) heroSubtitle.innerText = webData.hero.subtitle;
-
-            if (heroTitle) {
-                const textToType = webData.hero.title; 
-                let charIndex = 0;
-                let isDeleting = false;
-                
-                function typeWriter() {
-                    const currentText = isDeleting 
-                        ? textToType.substring(0, charIndex--) 
-                        : textToType.substring(0, charIndex++);
-
-                    heroTitle.innerHTML = currentText + '<span class="typing-cursor">|</span>';
-
-                    let typingSpeed = isDeleting ? 50 : 100; 
-
-                    if (!isDeleting && charIndex === textToType.length) {
-                        typingSpeed = 2000; 
-                        isDeleting = true;
-                    } 
-                    else if (isDeleting && charIndex === 0) {
-                        isDeleting = false;
-                        typingSpeed = 500; 
-                    }
-
-                    setTimeout(typeWriter, typingSpeed);
-                }
-
-                typeWriter();
-            }
-
-            // 3. Render Services
-            const servicesContainer = document.getElementById('services-container');
-            if (servicesContainer) {
-                servicesContainer.innerHTML = "";
-                webData.services.forEach((service, index) => {
-                    const card = document.createElement('div');
-                    card.className = 'service-card';
-                    card.style.cursor = 'pointer';
-                    
-                    let targetPage = "#";
-                    if (index === 0) targetPage = "website.html";
-                    if (index === 1) targetPage = "mobile.html"; 
-                    if (index === 2) targetPage = "uiux.html";    
-                    
-                    card.setAttribute('onclick', `window.location.href='${targetPage}'`);
-                    card.innerHTML = `
-                        <div class="service-icon"><i class="${service.iconClass}"></i></div>
-                        <h3>${service.title}</h3>
-                        <p>${service.desc}</p>
-                    `;
-                    servicesContainer.appendChild(card);
-                });
-            }
-
-            // 4. Render Testimonials
-            const testimonialsContainer = document.getElementById('testimonials-container');
-            if (testimonialsContainer) {
-                testimonialsContainer.innerHTML = "";
-                
-                function createCardHTML(testi) {
-                    return `
-                        <div class="testi-card">
-                            <div class="testi-content">
-                                <i class="fa-solid fa-quote-left" style="color: #00f0ff; margin-bottom: 10px; display:block;"></i>
-                                <div class="testi-text-block">
-                                    <p style="font-size: 0.85rem; line-height: 1.4; color: #e2e8f0; margin-bottom: 12px;">${testi.text}</p>
-                                    <span class="testi-author" style="font-size: 0.75rem; color: #ffd700; font-weight: 500; display: block;">${testi.author}</span>
-                                </div>
-                            </div>
-                        </div>
-                    `;
-                }
-
-                let rawContent = "";
-                webData.testimonials.forEach(testi => {
-                    rawContent += createCardHTML(testi);
-                });
-
-                testimonialsContainer.innerHTML = rawContent + rawContent;
-            }
-
-            // 5. Render Tombol WhatsApp 
-            const waBtn = document.getElementById('wa-btn');
-            if (waBtn) {
-                const formattedMessage = encodeURIComponent(webData.whatsappTemplateMessage);
-                waBtn.href = `https://wa.me/${webData.whatsappNumber}?text=${formattedMessage}`;
-            }
-
-            // 6. Render Footer URL & Address
-            const footerUrl = document.getElementById('footer-url-text');
-            const footerAddress = document.getElementById('footer-address-text');
+            // Nomor WhatsApp tujuan & Susun template teks rapi menggunakan format markdown WA
+            const waNumber = "6289677222133"; // Sesuaikan dengan nomor WA LUNA-INC
+            let message = `*PENGAJUAN PROYEK WEBSITE DEVELOPMENT*\n\n`;
+            message += `• *Nama Klien:* ${name}\n`;
+            message += `• *Jenis Website:* ${type}\n`;
+            message += `• *Kebutuhan:* ${desc}\n`;
+            message += `• *Dokumen Terunggah:* _${fileName}_\n\n`;
             
-            if (footerUrl) {
-                footerUrl.innerText = webData.websiteUrl.replace(/^https?:\/\//, '');
-                footerUrl.href = webData.websiteUrl;
+            if(fileInput.files.length > 0) {
+                message += `_(Halo Admin, saya telah memilih dokumen *${fileName}* pada form, mohon izinkan saya melampirkannya setelah pesan ini dikirim)._`;
             }
-            if (footerAddress) {
-                footerAddress.innerText = webData.address; 
-            }
+
+            // Encode pesan teks agar aman masuk url browser
+            const encodedMessage = encodeURIComponent(message);
+            
+            // Alihkan halaman ke WhatsApp web/aplikasi secara instan
+            window.location.href = `https://wa.me/${waNumber}?text=${encodedMessage}`;
         });
     </script>
 </body>
